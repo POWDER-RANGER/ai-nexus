@@ -21,11 +21,7 @@
     ::-webkit-scrollbar{width:6px}
     ::-webkit-scrollbar-track{background:var(--panel)}
     ::-webkit-scrollbar-thumb{background:var(--neon);border-radius:3px}
-
-    /* Neural network background */
     #neural-canvas{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.4}
-
-    /* NAV */
     .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,14,26,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,255,136,0.1);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between}
     .nav-brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.2rem;color:var(--neon);letter-spacing:-1px;text-decoration:none}
     .nav-brand span{color:var(--cyan)}
@@ -34,8 +30,6 @@
     .nav-links a:hover{color:var(--neon)}
     .nav-cta{padding:0.5rem 1.25rem;background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.3);color:var(--neon);text-decoration:none;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-weight:500;transition:all 0.3s}
     .nav-cta:hover{background:rgba(0,255,136,0.2);box-shadow:0 0 20px rgba(0,255,136,0.2)}
-
-    /* HERO */
     .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:8rem 2rem 4rem;background:radial-gradient(ellipse at 30% 20%,rgba(0,255,136,0.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(168,85,247,0.06) 0%,transparent 50%),var(--bg)}
     .hero-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;width:100%}
     .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem;padding:0.4rem 1rem;border-radius:100px;border:1px solid rgba(0,255,136,0.25);background:rgba(0,255,136,0.05);font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--neon);letter-spacing:1px;text-transform:uppercase}
@@ -50,8 +44,6 @@
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,255,136,0.3)}
     .btn-secondary{border:1px solid rgba(0,212,255,0.3);color:var(--cyan);background:rgba(0,212,255,0.05)}
     .btn-secondary:hover{border-color:var(--cyan);background:rgba(0,212,255,0.1)}
-
-    /* Terminal mockup */
     .terminal-mockup{background:var(--panel);border:1px solid rgba(0,255,136,0.15);border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 40px rgba(0,255,136,0.05)}
     .term-header{display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1rem;background:rgba(0,0,0,0.3);border-bottom:1px solid rgba(0,255,136,0.1)}
     .term-dot{width:12px;height:12px;border-radius:50%}
@@ -62,8 +54,6 @@
     .term-body .ok{color:var(--neon)}.term-body .warn{color:var(--gold)}
     .term-cursor{display:inline-block;width:8px;height:15px;background:var(--neon);animation:blink 1s infinite;vertical-align:middle;margin-left:2px}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-
-    /* SECTIONS */
     .section{padding:5rem 2rem;position:relative;z-index:1}
     .section-alt{background:var(--panel)}
     .container{max-width:1200px;margin:0 auto}
@@ -71,8 +61,6 @@
     .section-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--neon);text-transform:uppercase;letter-spacing:3px;margin-bottom:0.75rem}
     .section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:0.75rem;letter-spacing:-1px}
     .section-desc{font-size:1rem;color:var(--dim);max-width:550px;margin:0 auto;line-height:1.6}
-
-    /* FEATURE GRID */
     .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
     .feature{background:var(--surface);border:1px solid rgba(0,255,136,0.08);border-radius:10px;padding:1.75rem;transition:all 0.3s}
     .feature:hover{border-color:rgba(0,255,136,0.2);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.3)}
@@ -81,8 +69,6 @@
     .feature h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
     .feature p{font-size:0.85rem;color:var(--dim);line-height:1.6}
     .feature-tech{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--cyan);margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid rgba(0,212,255,0.1)}
-
-    /* ARCHITECTURE */
     .arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
     .arch-card{background:var(--surface);border:1px solid rgba(0,255,136,0.1);border-radius:10px;padding:1.5rem;text-align:center}
     .arch-card:hover{border-color:rgba(0,255,136,0.25)}
@@ -90,14 +76,10 @@
     .arch-card h4{font-size:0.9rem;font-weight:600;margin-bottom:0.5rem}
     .arch-card ul{list-style:none;font-size:0.75rem;color:var(--dim);line-height:2}
     .arch-card ul li::before{content:'> ';color:var(--neon)}
-
-    /* PRIVACY */
     .privacy-section{text-align:center;padding:4rem 2rem;background:radial-gradient(ellipse at center,rgba(0,255,136,0.05) 0%,transparent 70%)}
     .privacy-lock{font-size:4rem;margin-bottom:1rem}
     .privacy-title{font-size:1.5rem;font-weight:700;margin-bottom:0.5rem}
     .privacy-text{font-size:0.9rem;color:var(--dim);max-width:500px;margin:0 auto;line-height:1.6}
-
-    /* FOOTER */
     .footer{border-top:1px solid rgba(0,255,136,0.08);padding:3rem 2rem 2rem;text-align:center;position:relative;z-index:1;background:var(--panel)}
     .footer-brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.2rem;color:var(--neon);margin-bottom:0.5rem}
     .footer-brand span{color:var(--cyan)}
@@ -106,7 +88,6 @@
     .footer-links a{color:var(--dim);text-decoration:none;font-size:0.8rem;transition:color 0.3s}
     .footer-links a:hover{color:var(--neon)}
     .footer-copy{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:rgba(136,153,170,0.4);padding-top:1.5rem;border-top:1px solid rgba(0,255,136,0.06)}
-
     @media(max-width:900px){
       .hero-container{grid-template-columns:1fr;text-align:center}
       .hero-desc{margin:0 auto 2.5rem}
@@ -116,6 +97,15 @@
     }
     .fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease-out,transform 0.7s ease-out}
     .fade-in.visible{opacity:1;transform:translateY(0)}
+    /* CROSS-PROJECT NAV */
+    .xpn{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,0.95);backdrop-filter:blur(20px);border-top:1px solid rgba(0,255,136,0.2);padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:12px;transition:transform 0.3s;box-shadow:0 -4px 30px rgba(0,0,0,0.5)}
+    .xpn a{color:rgba(136,153,170,0.5);text-decoration:none;padding:6px 14px;border-radius:4px;transition:all 0.3s;white-space:nowrap;border:1px solid rgba(0,255,136,0.1)}
+    .xpn a:hover{color:var(--neon);border-color:var(--neon);background:rgba(0,255,136,0.08);box-shadow:0 0 12px rgba(0,255,136,0.2)}
+    .xpn a.xa{color:var(--neon);border-color:var(--neon);background:rgba(0,255,136,0.12);font-weight:700;text-shadow:0 0 8px rgba(0,255,136,0.3)}
+    .xpn .xt{color:var(--cyan);margin-right:10px;font-size:11px;letter-spacing:3px;text-transform:uppercase}
+    .xpnt{position:fixed;bottom:52px;right:20px;z-index:9999;background:rgba(10,14,26,0.8);border:1px solid rgba(0,255,136,0.2);color:var(--neon);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;cursor:pointer;transition:all 0.3s;box-shadow:0 0 15px rgba(0,255,136,0.1)}
+    .xpnt:hover{background:rgba(0,255,136,0.15);box-shadow:0 0 20px rgba(0,255,136,0.3);transform:scale(1.1)}
+    @media(max-width:768px){.xpn{font-size:10px;gap:4px;padding:8px 10px}.xpn a{padding:4px 8px;font-size:10px}.xpn .xt{display:none}.xpnt{bottom:48px;width:32px;height:32px;font-size:12px}}
   </style>
 </head>
 <body>
@@ -254,6 +244,17 @@
     </div>
     <p class="footer-copy">POWDER-RANGER © 2026 // MIT License</p>
   </footer>
+  <!-- CROSS-PROJECT NAVIGATION -->
+  <div class="xpn" id="xpn">
+  <span class="xt">// ECOSYSTEM</span>
+  <a href="https://powder-ranger.github.io" id="xpn-portfolio">Portfolio</a>
+  <a href="https://powder-ranger.github.io/nso-kryptonite-platform" id="xpn-nso">NSO Kryptonite</a>
+  <a href="https://powder-ranger.github.io/CIVWATCH" id="xpn-civwatch">CIVWATCH</a>
+  <a href="https://powder-ranger.github.io/OBLISK" id="xpn-oblisk">OBLISK</a>
+  <a href="https://powder-ranger.github.io/ai-nexus" id="xpn-ainexus">AI Nexus</a>
+  <a href="https://powder-ranger.github.io/dollar-gravity-framework" id="xpn-dollar">Dollar Gravity</a>
+  </div>
+  <button class="xpnt" id="xpnt" onclick="tgxpn()" title="Toggle nav (Shift+E)">&#9650;</button>
   <script>
     const canvas=document.getElementById('neural-canvas');
     const ctx=canvas.getContext('2d');
@@ -271,6 +272,11 @@
     animate();
     const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});},{threshold:0.1});
     document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+    // Cross-nav
+    const pn=document.getElementById('xpn'),pt=document.getElementById('xpnt');
+    function tgxpn(){const h=pn.style.transform==='translateY(100%)';pn.style.transform=h?'translateY(0)':'translateY(100%)';pt.innerHTML=h?'&#9650;':'&#9660;';pt.style.bottom=h?'52px':'20px';}
+    document.getElementById('xpn-ainexus').classList.add('xa');
+    document.addEventListener('keydown',e=>{if(e.shiftKey&&e.key==='E')tgxpn();if(e.shiftKey&&e.key==='T')window.scrollTo({top:0,behavior:'smooth'});});
   </script>
 </body>
 </html>
