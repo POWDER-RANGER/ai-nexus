@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Environment variables — NEVER commit .env files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Python (for future ML features)
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+tsc/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Secrets (defense in depth)
+*.pem
+*.key
+secrets/
+
+# Local database files (SQLite)
+*.db
+*.sqlite
+*.sqlite3
+
+# Model files (large binaries — will use Git LFS or download scripts)
+*.gguf
+*.onnx
+*.bin
+models/
+
+# Generated
+public/sitemap.xml
