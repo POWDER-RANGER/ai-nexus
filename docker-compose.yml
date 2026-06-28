@@ -1,0 +1,61 @@
+# AI NEXUS — Local Development Stack
+# Starts: Backend API, Frontend (dev server), SQLite database
+#
+# Usage:
+#   docker compose up --build
+#   Backend: http://localhost:3000
+#   Frontend: http://localhost:5173
+
+version: '3.9'
+
+networks:
+  ai_nexus_net:
+    driver: bridge
+
+volumes:
+  ai_nexus_data:
+
+services:
+  # ── Backend API — Node.js / Express
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ai-nexus-backend
+    restart: unless-stopped
+    networks: [ai_nexus_net]
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: file:/data/ai-nexus.db
+      JWT_SECRET: ${JWT_SECRET:-changeme_in_production_use_openssl_rand_base64_32}
+      CORS_ORIGIN: http://localhost:5173
+    volumes:
+      - ai_nexus_data:/data
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # ── Frontend — React (Vite dev server)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ai-nexus-frontend
+    restart: unless-stopped
+    networks: [ai_nexus_net]
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "5173:80"
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
